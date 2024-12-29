@@ -9,6 +9,7 @@ public class UserLoginController {
         return null;
     }
 
+    @SuppressWarnings("rawtypes")
     public ResponseEntity loginUser(LoginRequest loginRequest) {
         return null;
     }

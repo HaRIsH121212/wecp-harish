@@ -1,36 +1,47 @@
 package com.wecp.progressive.service.impl;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-import com.wecp.progressive.dao.CricketerDAO;
 import com.wecp.progressive.entity.Cricketer;
+import com.wecp.progressive.service.CricketerService;
 
-public class CricketerServiceImplArraylist implements CricketerDAO {
+public class CricketerServiceImplArraylist implements CricketerService {
 
-    @Override
-    public int addCricketer(Cricketer cricketer) {
-        return -1;
-    }
+    private static List<Cricketer> cricketersList = new ArrayList<>();
 
-    @Override
-    public Cricketer getCricketerById(int cricketerId) {
-        return null;
-    }
 
     @Override
-    public void updateCricketer(Cricketer cricketer) {
+    public Integer addCricketer(Cricketer cricketer) {
+        cricketersList.add(cricketer);
+        return cricketersList.size();
         
     }
-
-    @Override
-    public void deleteCricketer(int cricketerId) {
-        
-    }
-
     @Override
     public List<Cricketer> getAllCricketers() {
-        return List.of();
+        return new ArrayList<>(cricketersList);
+        
     }
+
+    
+
+    @Override
+    public List<Cricketer> getAllCricketersSortedByExperience() {
+        List<Cricketer> sortedCricketer = cricketersList;
+        sortedCricketer.sort(Comparator.comparing(Cricketer::getExperience));
+        return sortedCricketer;
+        
+    }
+    @Override
+    public void emptyArrayList()
+    {
+        CricketerService.super.emptyArrayList();
+    }
+   
 
 
 }
+
+
+ 
