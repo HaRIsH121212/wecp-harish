@@ -8,38 +8,24 @@ import com.wecp.progressive.entity.Team;
 import com.wecp.progressive.service.TeamService;
 
 public class TeamServiceImplArraylist implements TeamService {
-    private static List<Team> teamList = new ArrayList<>();
 
+    private List<Team> teamList = new ArrayList<>();
+
+   @Override 
+   public List<Team> getAllTeams() 
+   { 
+    return teamList;
+   }
     @Override
     public int addTeam(Team team) {
-        teamList.add(team);
-        return teamList.size();
-        
-    }
-
-    @Override
-    public List<Team> getAllTeams() {
-        return new ArrayList<>(teamList);
-        
-    }
-
-    
+      teamList.add(team);
+    return teamList.size();  }
 
     @Override
     public List<Team> getAllTeamsSortedByName() {
-        List<Team> sortedList = teamList;
-        sortedList.sort(Comparator.comparing(Team::getTeamName));
-        return sortedList;
-        
+        List<Team> sortedTeamList = teamList;
+        sortedTeamList.sort(Comparator.comparing(Team :: getTeamName));
+        return sortedTeamList;
     }
-    @Override
-    public void emptyArrayList()
-    {
-        TeamService.super.emptyArrayList();
-    }
-    
-
 
 }
-
-

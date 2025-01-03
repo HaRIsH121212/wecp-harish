@@ -1,15 +1,23 @@
 package com.wecp.progressive.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Team implements Comparable<Team>{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int teamId;
     private String teamName;
     private String location;
     private String ownerName;
     private int establishmentYear;
-    
+
     public Team() {
     }
-    
+
     public Team(int teamId, String teamName, String location, String ownerName, int establishmentYear) {
         this.teamId = teamId;
         this.teamName = teamName;
@@ -17,7 +25,7 @@ public class Team implements Comparable<Team>{
         this.ownerName = ownerName;
         this.establishmentYear = establishmentYear;
     }
-    
+
     public int getTeamId() {
         return teamId;
     }
@@ -59,11 +67,7 @@ public class Team implements Comparable<Team>{
     }
 
     @Override
-    public int compareTo(Team o) {
-        return this.getTeamName().compareTo(o.getTeamName());
+    public int compareTo(Team otherTeam) {
+        return this.getTeamName().compareTo(otherTeam.getTeamName());
     }
-    
-
-    
-
 }

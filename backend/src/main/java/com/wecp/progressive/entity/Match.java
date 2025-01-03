@@ -1,22 +1,29 @@
 package com.wecp.progressive.entity;
 
+import javax.persistence.*;
 import java.util.Date;
 
+// Since "match" is a reserved word in mysql, using table name as "matches"
+@Entity(name = "matches")
 public class Match {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int matchId;
     private int firstTeamId;
     private int secondTeamId;
+
+    @Temporal(TemporalType.DATE)
     private Date matchDate;
+
     private String venue;
     private String result;
     private String status;
     private int winnerTeamId;
-    
+
     public Match() {
     }
 
-    public Match(int matchId, int firstTeamId, int secondTeamId, Date matchDate, String venue, String result,
-            String status, int winnerTeamId) {
+    public Match(int matchId, int firstTeamId, int secondTeamId, Date matchDate, String venue, String result, String status, int winnerTeamId) {
         this.matchId = matchId;
         this.firstTeamId = firstTeamId;
         this.secondTeamId = secondTeamId;
@@ -55,10 +62,9 @@ public class Match {
         return matchDate;
     }
 
-    public void setMatchDate(java.util.Date date) {
-        this.matchDate = date;
+    public void setMatchDate(Date matchDate) {
+        this.matchDate = matchDate;
     }
-    
 
     public String getVenue() {
         return venue;
@@ -91,8 +97,4 @@ public class Match {
     public void setWinnerTeamId(int winnerTeamId) {
         this.winnerTeamId = winnerTeamId;
     }
-
-    
-    
-    
 }

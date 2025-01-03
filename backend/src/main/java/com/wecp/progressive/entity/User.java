@@ -1,13 +1,21 @@
 package com.wecp.progressive.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     private String fullName;
     private String username;
     private String password;
     private String email;
     private String role;
-    
+
     public User() {
     }
 
@@ -67,7 +75,4 @@ public class User {
     public void setRole(String role) {
         this.role = role;
     }
-    
-    
-
 }

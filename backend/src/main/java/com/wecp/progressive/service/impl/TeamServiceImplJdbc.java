@@ -1,58 +1,52 @@
 package com.wecp.progressive.service.impl;
 
-import java.util.List;
-
 import com.wecp.progressive.dao.TeamDAO;
 import com.wecp.progressive.entity.Team;
 import com.wecp.progressive.service.TeamService;
 
+import java.sql.SQLException;
+import java.util.Comparator;
+import java.util.List;
+
 public class TeamServiceImplJdbc implements TeamService {
+
     private TeamDAO teamDAO;
-    
-    public TeamServiceImplJdbc() {
-    }
 
     public TeamServiceImplJdbc(TeamDAO teamDAO) {
         this.teamDAO = teamDAO;
     }
 
-
-    
-
     @Override
-    public List<Team> getAllTeams() {
-        return List.of();
+    public List<Team> getAllTeams() throws SQLException {
+        return teamDAO.getAllTeams();
     }
 
     @Override
-    public int addTeam(Team team) {
-        return -1;
+    public int addTeam(Team team) throws SQLException {
+        return teamDAO.addTeam(team);
     }
 
     @Override
-    public void deleteTeam(int teamId) {
-        
-        
+    public List<Team> getAllTeamsSortedByName() throws SQLException {
+        List<Team> sortedTeams = teamDAO.getAllTeams();
+        if (!sortedTeams.isEmpty()) {
+            sortedTeams.sort(Comparator.comparing(Team::getTeamName));
+        }
+        return sortedTeams;
     }
 
     @Override
-    public void emptyArrayList() {
-        
+    public Team getTeamById(int teamId) throws SQLException {
+        return teamDAO.getTeamById(teamId);
     }
 
     @Override
-    public Team getTeamById(int teamId) {
-        return null;
+    public void updateTeam(Team team) throws SQLException {
+        teamDAO.updateTeam(team);
     }
 
     @Override
-    public void updateTeam(Team team) {
-        
+    public void deleteTeam(int teamId) throws SQLException {
+        teamDAO.deleteTeam(teamId);
     }
-
-    @Override
-    public List<Team> getAllTeamsSortedByName() {
-        return List.of();
-    }
-
 }
