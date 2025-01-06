@@ -4,6 +4,8 @@ public class LoginResponse {
    private String token;
    private String roles;
    private Integer userId;
+   public LoginResponse() {
+   }
    public LoginResponse(String token, String roles, Integer userId) {
       this.token = token;
       this.roles = roles;
@@ -27,6 +29,5 @@ public class LoginResponse {
    public void setUserId(Integer userId) {
       this.userId = userId;
    }
-
    
 }
