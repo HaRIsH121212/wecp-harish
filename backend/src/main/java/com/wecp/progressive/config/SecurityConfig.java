@@ -5,6 +5,10 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+<<<<<<< HEAD
+=======
+@SuppressWarnings("deprecation")
+>>>>>>> 2cb5e9a49a233acd1ec60d8608d513d5e7b02373
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {

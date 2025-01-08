@@ -1,6 +1,10 @@
 package com.wecp.progressive.controller;
 
+<<<<<<< HEAD
 import com.wecp.progressive.entity.Cricketer;
+=======
+// import com.wecp.progressive.entity.Cricketer;
+>>>>>>> 2cb5e9a49a233acd1ec60d8608d513d5e7b02373
 import com.wecp.progressive.entity.Match;
 import com.wecp.progressive.service.impl.MatchServiceImplJpa;
 import org.springframework.beans.factory.annotation.Autowired;

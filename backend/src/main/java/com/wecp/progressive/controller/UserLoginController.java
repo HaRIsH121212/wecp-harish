@@ -9,7 +9,15 @@ public class UserLoginController {
         return null;
     }
 
+<<<<<<< HEAD
     public ResponseEntity loginUser(LoginRequest loginRequest) {
         return null;
     }
 }
+=======
+    @SuppressWarnings("rawtypes")
+    public ResponseEntity loginUser(LoginRequest loginRequest) {
+        return null;
+    }
+}
+>>>>>>> 2cb5e9a49a233acd1ec60d8608d513d5e7b02373

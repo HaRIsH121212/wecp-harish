@@ -1,7 +1,11 @@
 package com.wecp.progressive.controller;
 
 import com.wecp.progressive.entity.Cricketer;
+<<<<<<< HEAD
 import com.wecp.progressive.entity.Team;
+=======
+// import com.wecp.progressive.entity.Team;
+>>>>>>> 2cb5e9a49a233acd1ec60d8608d513d5e7b02373
 import com.wecp.progressive.service.impl.CricketerServiceImplJpa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
