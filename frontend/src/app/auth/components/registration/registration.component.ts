@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/ipl/types/User';
@@ -45,4 +46,9 @@ export class RegistrationComponent implements OnInit {
       this.errorMessage = 'Please fill out the form correctly.';
     }
   }
+=======
+
+export class RegistrationComponent  {
+ 
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b
 }

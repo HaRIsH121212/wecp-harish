@@ -1,5 +1,6 @@
 package com.wecp.progressive.service.impl;
 
+<<<<<<< HEAD
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +35,8 @@ public class TicketBookingServiceImpl implements TicketBookingService{
     public List<TicketBooking> getBookingsByUserEmail(String email) {
         return ticketBookingRepository.findByEmail(email);
     }
+=======
+public class TicketBookingServiceImpl  {
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b
 
 }

@@ -1,5 +1,6 @@
 package com.wecp.progressive.repository;
 
+<<<<<<< HEAD
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -24,3 +25,8 @@ public interface VoteRepository extends JpaRepository<Vote, Integer> {
     @Query("DELETE FROM Vote v WHERE v.cricketer.cricketerId = :cricketerId")
     void deleteByCricketerId(@Param("cricketerId") int cricketerId);
 }
+=======
+
+public interface VoteRepository {
+}
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b

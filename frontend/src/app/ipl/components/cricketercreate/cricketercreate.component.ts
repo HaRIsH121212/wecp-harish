@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -77,3 +78,9 @@ export class CricketerCreateComponent implements OnInit {
     this.successMessage = null;
   }
 }
+=======
+
+export class CricketerCreateComponent {
+
+}
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b

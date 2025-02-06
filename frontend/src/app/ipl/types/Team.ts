@@ -1,5 +1,6 @@
 
 export class Team {
+<<<<<<< HEAD
 
     teamId: number;
     teamName: string;
@@ -26,4 +27,7 @@ export class Team {
         console.log(`Team Name: ${this.teamName}`);
         console.log(`Location: ${this.location}`);
     }
+=======
+  
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Team } from './Team';
 
 export class Match {
@@ -37,3 +38,9 @@ export class Match {
         console.log(`Winner: ${this.winnerTeam.teamName}`);
     }
 }
+=======
+
+export class Match {
+ 
+}
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b

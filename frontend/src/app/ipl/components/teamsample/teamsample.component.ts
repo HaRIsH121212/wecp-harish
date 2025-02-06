@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component } from "@angular/core";
 import { Team } from "../../types/Team";
 
@@ -10,4 +11,10 @@ import { Team } from "../../types/Team";
   })
 export class TeamSampleComponent  {
     team: Team = new Team(1, "CSK", "Chennai", "Dhoni", 2015);
+=======
+
+export class TeamSampleComponent  {
+
+  
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b
 }

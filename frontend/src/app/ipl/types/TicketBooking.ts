@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Match } from "./Match";
 
 export class TicketBooking {
@@ -24,4 +25,9 @@ export class TicketBooking {
         console.log(`Email: ${this.email}`);
         console.log(`Number of Tickets: ${this.numberOfTickets}`);
     }
+=======
+
+export class TicketBooking {
+
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b
 }

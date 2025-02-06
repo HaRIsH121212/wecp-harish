@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -17,5 +18,10 @@ export class LogoutComponent implements OnInit {
     localStorage.removeItem('token')
     this.router.navigate(["/auth"]);
   }
+=======
+
+export class LogoutComponent {
+
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b
 
 }

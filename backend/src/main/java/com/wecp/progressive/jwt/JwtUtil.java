@@ -1,5 +1,6 @@
 package com.wecp.progressive.jwt;
 
+<<<<<<< HEAD
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -87,3 +88,8 @@ public class JwtUtil {
     }
 }
  
+=======
+public class JwtUtil {
+
+}
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b

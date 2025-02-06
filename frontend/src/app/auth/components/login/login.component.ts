@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -50,4 +51,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
+=======
+
+
+export class LoginComponent  {
+  
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b
 }

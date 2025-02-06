@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Team } from './Team';
 
 export class Cricketer {
@@ -39,3 +40,15 @@ export class Cricketer {
         console.log(`Cricketer Name: ${this.cricketerName}`);
     }
 }
+=======
+export class Cricketer {
+  
+
+   
+}
+
+
+
+
+
+>>>>>>> 1e477257c951fd34a277dae7c497465b61ae0a5b
